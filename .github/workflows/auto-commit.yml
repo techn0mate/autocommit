@@ -2,7 +2,7 @@ name: Auto Commit
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '0 23 * * 1-6'
 
 jobs:
   build:
@@ -13,4 +13,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run auto-commit script
-      run: /bin/bash commiter.sh
+      run: /bin/bash auto-commit.sh
